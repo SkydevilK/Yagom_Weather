@@ -55,11 +55,11 @@ class WeatherAPI {
                     if let cityName = json["name"] as? String {
                         weather.cityName = cityName
                     }
-                    if let w = json["weather"] as? [String : Any] {
-                        if let icon = w["icon"] as? String {
+                    if let w = json["weather"] as? [[String: Any]] {
+                        if let icon = w.first?["icon"] as? String {
                             weather.weatherIconURL = icon
                         }
-                        if let description = w["description"] as? String {
+                        if let description = w.first?["description"] as? String {
                             weather.description = description
                         }
                     }
