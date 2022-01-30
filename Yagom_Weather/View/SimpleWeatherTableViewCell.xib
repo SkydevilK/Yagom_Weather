@@ -17,20 +17,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccH-Ea-Ktt">
-                        <rect key="frame" x="16" y="53.5" width="80" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="16" y="52" width="91.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 온도 : -11°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWN-Ng-u4V">
-                        <rect key="frame" x="100.5" y="16" width="119" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="110.5" y="16" width="99.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 습도 : 50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-hw-1h6">
-                        <rect key="frame" x="103.5" y="91" width="113" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="113" y="95" width="94" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -59,7 +59,7 @@
                 <outlet property="cityName" destination="ccH-Ea-Ktt" id="dad-Fo-Uy4"/>
                 <outlet property="currentHumidity" destination="0cg-hw-1h6" id="mhQ-nF-fYF"/>
                 <outlet property="currentTemperature" destination="wWN-Ng-u4V" id="353-2O-Ylx"/>
-                <outlet property="icon" destination="J4V-9L-iUQ" id="plQ-S7-U7P"/>
+                <outlet property="iconImageView" destination="J4V-9L-iUQ" id="QX0-N3-p2E"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="124.55357142857142"/>
         </tableViewCell>
