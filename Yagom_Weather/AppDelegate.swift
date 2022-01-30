@@ -10,7 +10,13 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
+    var isTurn = false
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if isTurn {
+            return [.all]
+        }
+        return [.portrait, .portraitUpsideDown]
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
