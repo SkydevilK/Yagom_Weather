@@ -79,4 +79,45 @@ class WeatherAPI {
             }.resume()
         }
     }
+    
+    func getFutureWeather(city: String, completion: @escaping ([Weather]) -> ()) {
+        if let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?id=\(Value.shared.getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=kr&units=metric") {
+            var request = URLRequest.init(url: url)
+            
+            request.httpMethod = "GET"
+            
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
+                guard let data = data else {
+                    return
+                }
+                
+                // data
+                if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
+                    var weathers = [Weather]()
+                    var weather = Weather()
+                    if let list = json["list"] as? [[String : Any]] {
+                        for obj in list {
+                            if let main = obj["main"] as? [String : Any] {
+                                if let minimumTemperature = main["temp_min"] as? Double {
+                                    weather.minimumTemperature = String(format: "%.f", minimumTemperature)
+                                }
+                                if let highestTemperature = main["temp_max"] as? Double {
+                                    weather.highestTemperature = String(format: "%.f", highestTemperature)
+                                }
+                                if let currentHumidity = main["humidity"] as? Double {
+                                    weather.currentHumidity = String(format: "%.f", currentHumidity)
+                                }
+                            }
+                            weathers.append(weather)
+                        }
+                    }
+                    completion(weathers)
+                }
+            }.resume()
+        }
+    }
+    
+    
+    
+    
 }

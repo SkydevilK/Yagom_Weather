@@ -183,11 +183,28 @@
                         <outlet property="sensoryTemperatureLabel" destination="o3l-Dl-PUU" id="mYW-Hr-Wrh"/>
                         <outlet property="temparetureLabel" destination="jla-Aq-WKr" id="Koz-nV-VFF"/>
                         <outlet property="windSpeedLabel" destination="jhM-wu-Dje" id="Zgb-V9-grV"/>
+                        <segue destination="EDX-6E-6tG" kind="show" id="ROx-VH-kpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAp-gL-2LN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="68.815592203898049"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8y6-5h-jcE">
+            <objects>
+                <viewController id="EDX-6E-6tG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q29-Qo-Jjg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1g2-8C-cJo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Jb-Vn-Bcj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27R-Bm-cbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="69"/>
         </scene>
     </scenes>
     <resources>
