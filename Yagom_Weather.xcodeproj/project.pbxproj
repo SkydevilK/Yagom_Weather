@@ -57,13 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		88D16AA627A71C5D0055144D /* Common */ = {
+		88D16AA627A71C5D0055144D /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				88D16AA727A71C690055144D /* Value.swift */,
 				88D16AAF27A72F7F0055144D /* CacheData.swift */,
 			);
-			path = Common;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		88EDFB5527A6F72C00111094 = {
@@ -85,7 +85,7 @@
 		88EDFB6027A6F72C00111094 /* Yagom_Weather */ = {
 			isa = PBXGroup;
 			children = (
-				88D16AA627A71C5D0055144D /* Common */,
+				88D16AA627A71C5D0055144D /* Util */,
 				88EDFB7527A6F7D800111094 /* Model */,
 				88EDFB7827A6F7D800111094 /* Repository */,
 				88EDFB7B27A6F7D800111094 /* Resources */,
