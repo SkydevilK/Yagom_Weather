@@ -135,12 +135,18 @@
                                     <action selector="onBackButtonClick:" destination="seN-Rd-oic" eventType="touchUpInside" id="sfl-Pt-PHI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2T-qC-ONd">
+                                <rect key="frame" x="284" y="8" width="87" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="timer" catalog="system" title="Future"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ufV-OW-eEo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Gcd-u8-vFE" firstAttribute="centerX" secondItem="ufV-OW-eEo" secondAttribute="centerX" id="6iP-fb-dmU"/>
                             <constraint firstItem="uS7-cF-qVa" firstAttribute="top" secondItem="ufV-OW-eEo" secondAttribute="top" constant="8" id="8AO-tJ-qMG"/>
+                            <constraint firstItem="y2T-qC-ONd" firstAttribute="top" secondItem="ufV-OW-eEo" secondAttribute="top" constant="8" id="8Ph-DJ-lUV"/>
                             <constraint firstItem="o3l-Dl-PUU" firstAttribute="leading" secondItem="ufV-OW-eEo" secondAttribute="leading" constant="64" id="CED-dF-nCE"/>
                             <constraint firstItem="uS7-cF-qVa" firstAttribute="leading" secondItem="ufV-OW-eEo" secondAttribute="leading" constant="4" id="GZK-pH-sUf"/>
                             <constraint firstItem="vX2-4j-fOO" firstAttribute="leading" secondItem="ufV-OW-eEo" secondAttribute="leading" constant="64" id="Hph-SQ-AWC"/>
@@ -161,6 +167,7 @@
                             <constraint firstItem="bsj-3Y-u9r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CHz-Vm-R0J" secondAttribute="trailing" constant="3" id="rhV-Zc-OKf"/>
                             <constraint firstItem="Gcd-u8-vFE" firstAttribute="top" secondItem="CHz-Vm-R0J" secondAttribute="bottom" constant="8" symbolic="YES" id="t8i-8l-aGi"/>
                             <constraint firstItem="G9m-rq-wef" firstAttribute="centerX" secondItem="ufV-OW-eEo" secondAttribute="centerX" id="tKM-bI-eWf"/>
+                            <constraint firstItem="ufV-OW-eEo" firstAttribute="trailing" secondItem="y2T-qC-ONd" secondAttribute="trailing" constant="4" id="tnW-tI-XbC"/>
                             <constraint firstItem="vX2-4j-fOO" firstAttribute="top" secondItem="o3l-Dl-PUU" secondAttribute="bottom" constant="8" symbolic="YES" id="x29-6a-NjY"/>
                         </constraints>
                     </view>
@@ -186,6 +193,7 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="line.3.horizontal.circle" catalog="system" width="128" height="121"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
