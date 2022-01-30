@@ -21,6 +21,14 @@ class DetailWeatherViewController: UIViewController {
     @IBAction func onBackButtonClick(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: true)
     }
+    @IBAction func onFutureButtonClick(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "LineChartView") as? LineChartViewController else {
+            return
+        }
+        vc.weather = self.weather
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
     var weather = Weather()
     override func viewDidLoad() {
         super.viewDidLoad()

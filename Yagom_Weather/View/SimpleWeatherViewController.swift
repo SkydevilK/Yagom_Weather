@@ -46,7 +46,6 @@ extension SimpleWeatherViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(indexPath.row)
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailWeatherView") as? DetailWeatherViewController else {
             return
         }
