@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88D16AA827A71C690055144D /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D16AA727A71C690055144D /* Value.swift */; };
 		88EDFB6227A6F72C00111094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDFB6127A6F72C00111094 /* AppDelegate.swift */; };
 		88EDFB6427A6F72C00111094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDFB6327A6F72C00111094 /* SceneDelegate.swift */; };
 		88EDFB6627A6F72C00111094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EDFB6527A6F72C00111094 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88D16AA727A71C690055144D /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		88EDFB5E27A6F72C00111094 /* Yagom_Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yagom_Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EDFB6127A6F72C00111094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88EDFB6327A6F72C00111094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88D16AA627A71C5D0055144D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				88D16AA727A71C690055144D /* Value.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		88EDFB5527A6F72C00111094 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		88EDFB6027A6F72C00111094 /* Yagom_Weather */ = {
 			isa = PBXGroup;
 			children = (
+				88D16AA627A71C5D0055144D /* Common */,
 				88EDFB7527A6F7D800111094 /* Model */,
 				88EDFB7827A6F7D800111094 /* Repository */,
 				88EDFB7B27A6F7D800111094 /* Resources */,
@@ -197,6 +208,7 @@
 				88EDFB6627A6F72C00111094 /* ViewController.swift in Sources */,
 				88EDFB6227A6F72C00111094 /* AppDelegate.swift in Sources */,
 				88EDFB7F27A6F7D800111094 /* City.swift in Sources */,
+				88D16AA827A71C690055144D /* Value.swift in Sources */,
 				88EDFB8327A6F7D800111094 /* CurrentWeatherViewController.swift in Sources */,
 				88EDFB8127A6F7D800111094 /* WeatherAPI.swift in Sources */,
 				88EDFB6427A6F72C00111094 /* SceneDelegate.swift in Sources */,

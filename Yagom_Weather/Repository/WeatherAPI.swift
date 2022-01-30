@@ -8,38 +8,9 @@
 import Foundation
 
 class WeatherAPI {
-    private var citys: [City] {
-        let decoder = JSONDecoder()
-        guard let jsonData = loadJson() else {
-            return []
-        }
-        if let json = try? decoder.decode([City].self, from: jsonData) {
-            return json
-        }
-        return []
-    }
-    
-    private func loadJson() -> Data? {
-        guard let jsonPath = Bundle.main.url(forResource: "city.list.min", withExtension: "json") else { return nil }
-        do {
-            let data = try Data(contentsOf: jsonPath)
-            return data
-        } catch {
-            return nil
-        }
-    }
-    
-    func getCity(name: String) -> City{
-        for city in citys {
-            if city.name == name {
-                return city
-            }
-        }
-        return City()
-    }
-    
+   
     func getWeather(city: String, completion: @escaping (Weather) -> ()) {
-        if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?id=\(getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=kr&units=metric") {
+        if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?id=\(Value.shared.getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=kr&units=metric") {
             var request = URLRequest.init(url: url)
             
             request.httpMethod = "GET"
