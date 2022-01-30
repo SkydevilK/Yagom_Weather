@@ -25,7 +25,7 @@ class SimpleWeatherViewController: UIViewController {
         simpleWeatherTableView.rowHeight = 128
         let nibName = UINib(nibName: "SimpleWeatherTableViewCell", bundle: nil)
         simpleWeatherTableView.register(nibName, forCellReuseIdentifier: "simpleWeatherCell")
-       
+        
     }
     
 }
@@ -43,4 +43,17 @@ extension SimpleWeatherViewController: UITableViewDelegate, UITableViewDataSourc
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print(indexPath.row)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailWeatherView") as? DetailWeatherViewController else {
+            return
+        }
+        vc.weather = self.simpleWeatherListViewModel.weathers[indexPath.row]
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    
 }
