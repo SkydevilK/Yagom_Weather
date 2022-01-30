@@ -8,7 +8,22 @@
 import Foundation
 
 class WeatherAPI {
-   
+    
+    static let shared = WeatherAPI()
+    private init() {}
+    
+    func getWeathers(cities: [String], completion: @escaping ([Weather]) -> ()) {
+        var weathers = [Weather]()
+        for city in cities {
+            getWeather(city: city, completion: { weather in
+                weathers.append(weather)
+                if weathers.count == cities.count {
+                    completion(weathers)
+                }
+            })
+        }
+    }
+    
     func getWeather(city: String, completion: @escaping (Weather) -> ()) {
         if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?id=\(Value.shared.getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=kr&units=metric") {
             var request = URLRequest.init(url: url)
