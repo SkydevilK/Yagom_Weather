@@ -15,7 +15,7 @@ struct Weather {
             return weatherIcon
         }
         set(value) {
-            weatherIcon = "https://openweathermap.org/img/wn/\(value)@2x.png"
+            weatherIcon = "http://openweathermap.org/img/wn/\(value)@2x.png"
         }
     }
     var currentTemperature: String = ""
