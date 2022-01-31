@@ -9,12 +9,28 @@
 ## 아쉬운 점
 - MVVM을 제대로 하려면 DataBinding도 진행해야 하는데 시골을 가야해서 못했다.
 - RxSwift / RxCocoa 등 Rx문법을 공부해야겠다.
+- 그래프 그리는 부분에서 화씨로 변경할 경우 그래프가 지나치게 위로 올라가는 현상이 발생한다.
+  - 아무래도 보정 값을 넣으면 될 것 같은데 아쉽다.
+
 
 ## 첫 번째 화면 (현재 날씨 화면에 표시)
 
 - TableView를 활용해 도시들의 날씨를 보여주었다.
 
 <img width="50%" src="https://user-images.githubusercontent.com/48668211/151744020-0afc81df-9432-412b-8a19-bbde36758aae.gif"/>
+
+- 정렬 기능
+  - 도시 이름 순 (오름차순)
+
+<img width="50%" src="https://user-images.githubusercontent.com/48668211/151755434-40b269a7-13a0-4eb3-b80e-0bf394013429.mp4"/>
+
+  - 현재 온도 순 (내림차순)
+
+<img width="50%" src="https://user-images.githubusercontent.com/48668211/151755485-e4617f39-05be-4b26-ab2f-555c09c711e6.mp4"/>
+
+- 섭씨 / 화씨 변경
+
+<img width="50%" src="https://user-images.githubusercontent.com/48668211/151755715-d2ea3eef-3d8b-4752-a054-85c212d32db2.mp4"/>
 
 ## 두 번째 화면 (상세 화면 표시)
 
@@ -30,3 +46,9 @@
 
 <img width="50%" src="https://user-images.githubusercontent.com/48668211/151744975-7194c5c2-7d3e-4213-8f6a-255c76372c4f.mp4"/>
 
+## Localization
+
+- 언어는 영어 / 한국어만 지원하도록 하였다.
+
+
+<img width="50%" src="https://user-images.githubusercontent.com/48668211/151755814-a672fd97-a30b-42ac-9ef8-d869f296ad4a.mp4"/>
