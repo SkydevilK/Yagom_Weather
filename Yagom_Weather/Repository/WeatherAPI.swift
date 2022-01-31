@@ -111,6 +111,9 @@ class WeatherAPI {
                                     weather.currentHumidity = String(format: "%.f", currentHumidity)
                                 }
                             }
+                            if let dtTxt = obj["dt_txt"] as? String {
+                                weather.timeStamp = dtTxt
+                            }
                             weathers.append(weather)
                         }
                     }

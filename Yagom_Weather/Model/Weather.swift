@@ -26,4 +26,5 @@ struct Weather {
     var atmosphericPressure: String = ""
     var windSpeed: String = ""
     var description: String = ""
+    var timeStamp: String = ""
 }

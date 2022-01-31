@@ -205,19 +205,18 @@
                                 <rect key="frame" x="4" y="8" width="69" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Back"/>
+                                <connections>
+                                    <action selector="onBackButtonClick:" destination="EDX-6E-6tG" eventType="touchUpInside" id="kt5-J9-Uh1"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovU-Pv-Ien">
-                                <rect key="frame" x="64" y="55" width="247" height="528"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivH-rD-XL2">
-                                <rect key="frame" x="327" y="55" width="30" height="21"/>
+                                <rect key="frame" x="329" y="47" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="온도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-kx-vYj">
-                                <rect key="frame" x="18" y="55" width="30" height="21"/>
+                                <rect key="frame" x="16" y="47" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -227,15 +226,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ivH-rD-XL2" firstAttribute="centerY" secondItem="ff3-kx-vYj" secondAttribute="centerY" id="4Gz-YY-UJS"/>
-                            <constraint firstItem="ivH-rD-XL2" firstAttribute="leading" secondItem="ovU-Pv-Ien" secondAttribute="trailing" constant="16" id="7XV-kf-yMn"/>
-                            <constraint firstItem="1g2-8C-cJo" firstAttribute="trailing" secondItem="ovU-Pv-Ien" secondAttribute="trailing" constant="64" id="Gwu-Cj-3NX"/>
+                            <constraint firstItem="1g2-8C-cJo" firstAttribute="trailing" secondItem="ivH-rD-XL2" secondAttribute="trailing" constant="16" id="H9s-jJ-ktG"/>
+                            <constraint firstItem="ff3-kx-vYj" firstAttribute="leading" secondItem="1g2-8C-cJo" secondAttribute="leading" constant="16" id="KK0-eu-ahg"/>
+                            <constraint firstItem="1g2-8C-cJo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X4w-Lv-cYw" secondAttribute="trailing" symbolic="YES" id="LqY-vu-LXP"/>
                             <constraint firstItem="X4w-Lv-cYw" firstAttribute="leading" secondItem="1g2-8C-cJo" secondAttribute="leading" constant="4" id="N2d-SG-m69"/>
                             <constraint firstItem="X4w-Lv-cYw" firstAttribute="top" secondItem="1g2-8C-cJo" secondAttribute="top" constant="8" id="dYx-SK-U0b"/>
-                            <constraint firstItem="ff3-kx-vYj" firstAttribute="top" secondItem="X4w-Lv-cYw" secondAttribute="bottom" constant="16" id="eBE-Gf-x24"/>
-                            <constraint firstItem="ovU-Pv-Ien" firstAttribute="leading" secondItem="1g2-8C-cJo" secondAttribute="leading" constant="64" id="oIf-aX-9QR"/>
-                            <constraint firstItem="ovU-Pv-Ien" firstAttribute="top" secondItem="X4w-Lv-cYw" secondAttribute="bottom" constant="16" id="rzJ-mp-xQl"/>
-                            <constraint firstItem="1g2-8C-cJo" firstAttribute="bottom" secondItem="ovU-Pv-Ien" secondAttribute="bottom" constant="64" id="vd4-Cg-DeL"/>
-                            <constraint firstItem="ovU-Pv-Ien" firstAttribute="leading" secondItem="ff3-kx-vYj" secondAttribute="trailing" constant="16" id="wEp-ZG-vTc"/>
+                            <constraint firstItem="ff3-kx-vYj" firstAttribute="top" secondItem="X4w-Lv-cYw" secondAttribute="bottom" constant="8" id="eBE-Gf-x24"/>
+                            <constraint firstItem="ivH-rD-XL2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ff3-kx-vYj" secondAttribute="trailing" constant="8" symbolic="YES" id="jNO-ah-S1f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Jb-Vn-Bcj"/>
