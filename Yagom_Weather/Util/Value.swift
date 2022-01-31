@@ -38,4 +38,5 @@ class Value {
         return City()
     }
     
+    public var units = "metric"
 }

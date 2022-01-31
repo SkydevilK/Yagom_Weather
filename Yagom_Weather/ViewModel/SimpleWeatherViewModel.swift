@@ -53,7 +53,11 @@ extension SimpleWeatherViewModel {
         return self.weather.cityName
     }
     var currentTemperature: String? {
-        return "현재 온도 : \(self.weather.currentTemperature)°C"
+        if Value.shared.units == "metric" {
+            return "현재 온도 : \(self.weather.currentTemperature)°C"
+        } else {
+            return "현재 온도 : \(self.weather.currentTemperature)°F"
+        }
     }
     var currentHumidity: String? {
         return "현재 습도 : \(self.weather.currentHumidity)%"

@@ -33,10 +33,16 @@ class SimpleWeatherViewController: UIViewController {
             self.present(settingAlert, animated: false, completion: nil)
         })
         let celsiusAction = UIAlertAction(title: "섭씨", style: .default, handler: { _ in
-            print("섭씨")
+            if Value.shared.units != "metric" {
+                Value.shared.units = "metric"
+                self.setData()
+            }
         })
         let fahrenheitAction = UIAlertAction(title: "화씨", style: .default, handler: { _ in
-            print("화씨")
+            if Value.shared.units != "imperial" {
+                Value.shared.units = "imperial"
+                self.setData()
+            }
         })
         let language = UIAlertAction(title: "언어 설정", style: .default, handler: {
             _ in
@@ -49,18 +55,21 @@ class SimpleWeatherViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        WeatherAPI.shared.getWeathers(cities: cityNames, completion: { weathers in
-            self.simpleWeatherListViewModel = SimpleWeatherListViewModel(weathers: weathers)
-            DispatchQueue.main.async {
-                self.simpleWeatherTableView.reloadData()
-            }
-        })
+        setData()
         simpleWeatherTableView.delegate = self
         simpleWeatherTableView.dataSource = self
         simpleWeatherTableView.rowHeight = 128
         let nibName = UINib(nibName: "SimpleWeatherTableViewCell", bundle: nil)
         simpleWeatherTableView.register(nibName, forCellReuseIdentifier: "simpleWeatherCell")
         
+    }
+    func setData() {
+        WeatherAPI.shared.getWeathers(cities: self.cityNames, completion: { weathers in
+            self.simpleWeatherListViewModel = SimpleWeatherListViewModel(weathers: weathers)
+            DispatchQueue.main.async {
+                self.simpleWeatherTableView.reloadData()
+            }
+        })
     }
     
 }
