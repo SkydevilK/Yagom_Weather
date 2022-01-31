@@ -32,6 +32,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onOptionButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cdd-g1-Usm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

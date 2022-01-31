@@ -12,6 +12,26 @@ class SimpleWeatherViewController: UIViewController {
     
     private var simpleWeatherListViewModel = SimpleWeatherListViewModel(weathers: [])
     @IBOutlet weak var simpleWeatherTableView: UITableView!
+    @IBAction func onOptionButtonClick(_ sender: Any) {
+        let alert = UIAlertController(title: "Setting", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+        let sortAction = UIAlertAction(title: "정렬", style: .default, handler: { _ in
+            print("정렬")
+        })
+        let celsiusAction = UIAlertAction(title: "섭씨", style: .default, handler: { _ in
+            print("섭씨")
+        })
+        let fahrenheitAction = UIAlertAction(title: "화씨", style: .default, handler: { _ in
+            print("화씨")
+        })
+        let language = UIAlertAction(title: "언어 설정", style: .default, handler: {
+            _ in
+        })
+        alert.addAction(sortAction)
+        alert.addAction(celsiusAction)
+        alert.addAction(fahrenheitAction)
+        alert.addAction(language)
+        present(alert, animated: false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         WeatherAPI.shared.getWeathers(cities: cityNames, completion: { weathers in
