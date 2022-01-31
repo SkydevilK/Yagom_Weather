@@ -15,7 +15,22 @@ class SimpleWeatherViewController: UIViewController {
     @IBAction func onOptionButtonClick(_ sender: Any) {
         let alert = UIAlertController(title: "Setting", message: "", preferredStyle: UIAlertController.Style.actionSheet)
         let sortAction = UIAlertAction(title: "정렬", style: .default, handler: { _ in
-            print("정렬")
+            let settingAlert = UIAlertController(title: "정렬", message: "정렬 방식 선택", preferredStyle: UIAlertController.Style.actionSheet)
+            let nameSortAction = UIAlertAction(title: "도시 이름 순", style: .default, handler: { _ in
+                self.simpleWeatherListViewModel.sortByName()
+                DispatchQueue.main.async {
+                    self.simpleWeatherTableView.reloadData()
+                }
+            })
+            let temperatureSortAction = UIAlertAction(title: "현재 온도 순", style: .default, handler: { _ in
+                self.simpleWeatherListViewModel.sortByTemperature()
+                DispatchQueue.main.async {
+                    self.simpleWeatherTableView.reloadData()
+                }
+            })
+            settingAlert.addAction(nameSortAction)
+            settingAlert.addAction(temperatureSortAction)
+            self.present(settingAlert, animated: false, completion: nil)
         })
         let celsiusAction = UIAlertAction(title: "섭씨", style: .default, handler: { _ in
             print("섭씨")

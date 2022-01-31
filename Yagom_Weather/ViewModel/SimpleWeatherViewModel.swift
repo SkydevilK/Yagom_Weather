@@ -8,7 +8,7 @@
 import Foundation
 
 struct SimpleWeatherListViewModel {
-    let weathers: [Weather]
+    var weathers: [Weather]
 }
 
 extension SimpleWeatherListViewModel {
@@ -26,6 +26,18 @@ extension SimpleWeatherListViewModel {
     }
 }
 
+extension SimpleWeatherListViewModel {
+    mutating func sortByName() {
+        weathers.sort { (left, right) -> Bool in
+            return left.cityName < right.cityName
+        }
+    }
+    mutating func sortByTemperature() {
+        weathers.sort { (left, right) -> Bool in
+            return left.currentTemperature > right.currentTemperature
+        }
+    }
+}
 struct SimpleWeatherViewModel {
     private let weather: Weather
 }
@@ -50,3 +62,4 @@ extension SimpleWeatherViewModel {
         return self.weather.weatherIconURL
     }
 }
+
