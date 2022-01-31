@@ -52,6 +52,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentTemperatureText" destination="N04-r9-Bm1" id="EFb-hi-0rA"/>
                         <outlet property="simpleWeatherTableView" destination="txF-Bq-1Wt" id="n8x-qM-wSy"/>
                         <segue destination="seN-Rd-oic" kind="show" id="I53-gr-hVK"/>
                     </connections>
@@ -212,14 +213,14 @@
                                     <action selector="onBackButtonClick:" destination="EDX-6E-6tG" eventType="touchUpInside" id="kt5-J9-Uh1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivH-rD-XL2">
-                                <rect key="frame" x="329" y="47" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivH-rD-XL2">
+                                <rect key="frame" x="359" y="47" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="온도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-kx-vYj">
-                                <rect key="frame" x="16" y="47" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-kx-vYj">
+                                <rect key="frame" x="16" y="47" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -239,6 +240,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Jb-Vn-Bcj"/>
+                    <connections>
+                        <outlet property="humidityText" destination="ivH-rD-XL2" id="zJU-Tt-fdm"/>
+                        <outlet property="temperatureText" destination="ff3-kx-vYj" id="Ahr-Zl-fmz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27R-Bm-cbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

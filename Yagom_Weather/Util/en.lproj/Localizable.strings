@@ -1,0 +1,24 @@
+/* 
+ Localizable.strings
+ Yagom_Weather
+ 
+ Created by SkydevilK on 2022/01/31.
+ 
+ */
+"Sort" = "Sort";
+"SelectSorting" = "Select sorting method";
+"ByCityName" = "By city name (ascending)";
+"ByCurrentTemperature" = "Current temperature order (descending)";
+"Celsius" = "Celsius";
+"Fahrenheit" = "Fahrenheit";
+"Language" = "Language";
+"Highest" = "Highest";
+"Minimum" = "Minimum";
+"sensoryTemperature" = "Sensory Temperature";
+"currentTemperature" = "Current Temperature";
+"currentHumidity" = "Current Humidity";
+"atmosphericPressure" = "Atmospheric Pressure";
+"windSpeed" = "Wind Speed";
+"Temperature" = "Temperature";
+"Humidity" = "Humidity";
+"CurrentWeather" = "Current Weather";

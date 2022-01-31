@@ -11,18 +11,19 @@ class SimpleWeatherViewController: UIViewController {
     private let cityNames = ["Gongju", "Gwangju", "Gumi", "Gunsan", "Daegu", "Daejeon", "Mokpo", "Busan", "Seosan", "Seoul", "Sokcho", "Suwon", "Suncheon", "Ulsan", "Iksan", "Jeonju", "Jeju City", "Cheonan", "Cheongju-si", "Chuncheon"]
     
     private var simpleWeatherListViewModel = SimpleWeatherListViewModel(weathers: [])
+    @IBOutlet weak var currentTemperatureText: UILabel!
     @IBOutlet weak var simpleWeatherTableView: UITableView!
     @IBAction func onOptionButtonClick(_ sender: Any) {
         let alert = UIAlertController(title: "Setting", message: "", preferredStyle: UIAlertController.Style.actionSheet)
-        let sortAction = UIAlertAction(title: "정렬", style: .default, handler: { _ in
-            let settingAlert = UIAlertController(title: "정렬", message: "정렬 방식 선택", preferredStyle: UIAlertController.Style.actionSheet)
-            let nameSortAction = UIAlertAction(title: "도시 이름 순", style: .default, handler: { _ in
+        let sortAction = UIAlertAction(title: NSLocalizedString("Sort", comment: ""), style: .default, handler: { _ in
+            let settingAlert = UIAlertController(title: NSLocalizedString("Sort", comment: ""), message: NSLocalizedString("SelectSorting", comment: ""), preferredStyle: UIAlertController.Style.actionSheet)
+            let nameSortAction = UIAlertAction(title: NSLocalizedString("ByCityName", comment: ""), style: .default, handler: { _ in
                 self.simpleWeatherListViewModel.sortByName()
                 DispatchQueue.main.async {
                     self.simpleWeatherTableView.reloadData()
                 }
             })
-            let temperatureSortAction = UIAlertAction(title: "현재 온도 순", style: .default, handler: { _ in
+            let temperatureSortAction = UIAlertAction(title: NSLocalizedString("ByCurrentTemperature", comment: ""), style: .default, handler: { _ in
                 self.simpleWeatherListViewModel.sortByTemperature()
                 DispatchQueue.main.async {
                     self.simpleWeatherTableView.reloadData()
@@ -32,29 +33,26 @@ class SimpleWeatherViewController: UIViewController {
             settingAlert.addAction(temperatureSortAction)
             self.present(settingAlert, animated: false, completion: nil)
         })
-        let celsiusAction = UIAlertAction(title: "섭씨", style: .default, handler: { _ in
+        let celsiusAction = UIAlertAction(title: NSLocalizedString("Celsius", comment: ""), style: .default, handler: { _ in
             if Value.shared.units != "metric" {
                 Value.shared.units = "metric"
                 self.setData()
             }
         })
-        let fahrenheitAction = UIAlertAction(title: "화씨", style: .default, handler: { _ in
+        let fahrenheitAction = UIAlertAction(title: NSLocalizedString("Fahrenheit", comment: ""), style: .default, handler: { _ in
             if Value.shared.units != "imperial" {
                 Value.shared.units = "imperial"
                 self.setData()
             }
         })
-        let language = UIAlertAction(title: "언어 설정", style: .default, handler: {
-            _ in
-        })
         alert.addAction(sortAction)
         alert.addAction(celsiusAction)
         alert.addAction(fahrenheitAction)
-        alert.addAction(language)
         present(alert, animated: false, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentTemperatureText.text = NSLocalizedString("CurrentWeather", comment: "")
         setData()
         simpleWeatherTableView.delegate = self
         simpleWeatherTableView.dataSource = self
@@ -71,7 +69,6 @@ class SimpleWeatherViewController: UIViewController {
             }
         })
     }
-    
 }
 
 extension SimpleWeatherViewController: UITableViewDelegate, UITableViewDataSource {

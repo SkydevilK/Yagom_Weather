@@ -10,6 +10,7 @@ import Foundation
 class WeatherAPI {
     
     static let shared = WeatherAPI()
+    
     private init() {}
     
     func getWeathers(cities: [String], completion: @escaping ([Weather]) -> ()) {
@@ -25,7 +26,7 @@ class WeatherAPI {
     }
     
     func getWeather(city: String, completion: @escaping (Weather) -> ()) {
-        if let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?id=\(Value.shared.getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=kr&units=\(Value.shared.units)") {
+        if let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?id=\(Value.shared.getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=\(AppDelegate.language)&units=\(Value.shared.units)") {
             var request = URLRequest.init(url: url)
             
             request.httpMethod = "GET"
@@ -84,7 +85,7 @@ class WeatherAPI {
     }
     
     func getFutureWeather(city: String, completion: @escaping ([Weather]) -> ()) {
-        if let url = URL(string: "http://api.openweathermap.org/data/2.5/forecast?id=\(Value.shared.getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=kr&units=\(Value.shared.units)") {
+        if let url = URL(string: "http://api.openweathermap.org/data/2.5/forecast?id=\(Value.shared.getCity(name: city).id)&appid=e565bb0935cac72af3e63168941e8b30&lang=\(AppDelegate.language)&units=\(Value.shared.units)") {
             var request = URLRequest.init(url: url)
             
             request.httpMethod = "GET"

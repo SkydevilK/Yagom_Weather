@@ -35,8 +35,8 @@ class DetailWeatherViewController: UIViewController {
         cityNameLabel.text = weather.cityName
         temparetureLabel.text = "\(weather.currentTemperature)°"
         descriptionLabel.text = weather.description
-        highestTemparetureLabel.text = "최고:\(weather.highestTemperature)°"
-        minimumTemparetureLabel.text = "최저:\(weather.minimumTemperature)°"
+        highestTemparetureLabel.text = "\(NSLocalizedString("Highest", comment: "")):\(weather.highestTemperature)°"
+        minimumTemparetureLabel.text = "\(NSLocalizedString("Minimum", comment: "")):\(weather.minimumTemperature)°"
         guard let url = URL(string: weather.weatherIconURL ) else {
             DispatchQueue.main.async {
                 self.iconUIImage?.image = UIImage(systemName: "xmark.circle")!
@@ -54,9 +54,9 @@ class DetailWeatherViewController: UIViewController {
                 self.iconUIImage?.image = image
             }
         }
-        sensoryTemperatureLabel.text = "체감기온 : \(weather.sensoryTemperature)°"
-        humidityLabel.text = "현재습도 : \(weather.currentHumidity)%"
-        atmosphericPressureLabel.text = "기압 : \(weather.atmosphericPressure) hPa"
-        windSpeedLabel.text = "풍속 : \(weather.windSpeed) m/s"
+        sensoryTemperatureLabel.text = "\(NSLocalizedString("sensoryTemperature", comment: "")) : \(weather.sensoryTemperature)°"
+        humidityLabel.text = "\(NSLocalizedString("currentHumidity", comment: "")) : \(weather.currentHumidity)%"
+        atmosphericPressureLabel.text = "\(NSLocalizedString("atmosphericPressure", comment: "")) : \(weather.atmosphericPressure) hPa"
+        windSpeedLabel.text = "\(NSLocalizedString("windSpeed", comment: "")) : \(weather.windSpeed) m/s"
     }
 }

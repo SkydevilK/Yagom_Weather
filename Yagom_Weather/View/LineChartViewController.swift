@@ -21,6 +21,8 @@ class LineChartViewController: UIViewController {
     @IBAction func onBackButtonClick(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: true)
     }
+    @IBOutlet weak var temperatureText: UILabel!
+    @IBOutlet weak var humidityText: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         appDelegate.isTurn = true
@@ -33,6 +35,8 @@ class LineChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        temperatureText.text = NSLocalizedString("Temperature", comment: "")
+        humidityText.text =  NSLocalizedString("Humidity", comment: "")
         WeatherAPI.shared.getFutureWeather(city: weather.cityName, completion: { weathers in
             for weather in weathers {
                 self.minTempValues.append(CGFloat((weather.minimumTemperature as NSString).doubleValue))

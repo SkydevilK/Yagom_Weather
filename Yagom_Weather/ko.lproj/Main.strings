@@ -1,0 +1,63 @@
+
+/* Class = "UILabel"; text = "최고:30°"; ObjectID = "CHz-Vm-R0J"; */
+"CHz-Vm-R0J.text" = "최고:30°";
+
+/* Class = "UIViewController"; title = "LineChartView"; ObjectID = "EDX-6E-6tG"; */
+"EDX-6E-6tG.title" = "LineChartView";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "G9m-rq-wef"; */
+"G9m-rq-wef.text" = "Label";
+
+/* Class = "UILabel"; text = "현재 날씨"; ObjectID = "N04-r9-Bm1"; */
+"N04-r9-Bm1.text" = "현재 날씨";
+
+/* Class = "UILabel"; text = "기압 : 1541 hPa"; ObjectID = "Ocg-Au-9du"; */
+"Ocg-Au-9du.text" = "기압 : 1541 hPa";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VnK-i1-OBA"; */
+"VnK-i1-OBA.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Back"; ObjectID = "X4w-Lv-cYw"; */
+"X4w-Lv-cYw.configuration.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "X4w-Lv-cYw"; */
+"X4w-Lv-cYw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "최저:-30°"; ObjectID = "bsj-3Y-u9r"; */
+"bsj-3Y-u9r.text" = "최저:-30°";
+
+/* Class = "UILabel"; text = "온도"; ObjectID = "ff3-kx-vYj"; */
+"ff3-kx-vYj.text" = "온도";
+
+/* Class = "UILabel"; text = "습도"; ObjectID = "ivH-rD-XL2"; */
+"ivH-rD-XL2.text" = "습도";
+
+/* Class = "UILabel"; text = "풍속 : 150 m/s"; ObjectID = "jhM-wu-Dje"; */
+"jhM-wu-Dje.text" = "풍속 : 150 m/s";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jla-Aq-WKr"; */
+"jla-Aq-WKr.text" = "Label";
+
+/* Class = "UILabel"; text = "체감기온 : 30°"; ObjectID = "o3l-Dl-PUU"; */
+"o3l-Dl-PUU.text" = "체감기온 : 30°";
+
+/* Class = "UIViewController"; title = "DetailWeatherView"; ObjectID = "seN-Rd-oic"; */
+"seN-Rd-oic.title" = "DetailWeatherView";
+
+/* Class = "UIButton"; configuration.title = "Back"; ObjectID = "uS7-cF-qVa"; */
+"uS7-cF-qVa.configuration.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uS7-cF-qVa"; */
+"uS7-cF-qVa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "현재습도 : 30%"; ObjectID = "vX2-4j-fOO"; */
+"vX2-4j-fOO.text" = "현재습도 : 30%";
+
+/* Class = "UIButton"; configuration.title = "Future"; ObjectID = "y2T-qC-ONd"; */
+"y2T-qC-ONd.configuration.title" = "Future";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "y2T-qC-ONd"; */
+"y2T-qC-ONd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zLo-Os-wjE"; */
+"zLo-Os-wjE.text" = "Label";

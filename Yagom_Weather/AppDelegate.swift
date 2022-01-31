@@ -11,6 +11,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var isTurn = false
+    let locale = NSLocale.autoupdatingCurrent
+    static var language: String = ""
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         if isTurn {
             return [.all]
@@ -19,6 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let code = locale.languageCode!
+        AppDelegate.language = locale.localizedString(forLanguageCode: code)!
+        if(AppDelegate.language == "한국어") {
+            AppDelegate.language = "kr"
+        } else {
+            AppDelegate.language = "en"
+        }
+        print(AppDelegate.language)
         // Override point for customization after application launch.
         return true
     }
