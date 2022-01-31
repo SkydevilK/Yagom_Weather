@@ -28,14 +28,10 @@ extension SimpleWeatherListViewModel {
 
 extension SimpleWeatherListViewModel {
     mutating func sortByName() {
-        weathers.sort { (left, right) -> Bool in
-            return left.cityName < right.cityName
-        }
+        weathers = weathers.sorted(by: {$0.cityName < $1.cityName})
     }
     mutating func sortByTemperature() {
-        weathers.sort { (left, right) -> Bool in
-            return left.currentTemperature > right.currentTemperature
-        }
+        weathers = weathers.sorted(by: {Int($0.currentTemperature)! > Int($1.currentTemperature)!})
     }
 }
 struct SimpleWeatherViewModel {

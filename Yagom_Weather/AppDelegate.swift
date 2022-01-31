@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             AppDelegate.language = "en"
         }
-        print(AppDelegate.language)
         // Override point for customization after application launch.
         return true
     }

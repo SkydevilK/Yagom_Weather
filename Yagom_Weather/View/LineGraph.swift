@@ -38,7 +38,6 @@ class LineGraph: UIView {
         self.layer.addSublayer(graphLayer)
         
         let xOffset: CGFloat = self.frame.width / CGFloat(values.count)
-        
         var currentX: CGFloat = 0
         let startPosition: CGPoint = CGPoint(x: currentX, y: (self.frame.height / 2) - (values[0] * 10) - 50)
         self.graphPath.move(to: startPosition)
